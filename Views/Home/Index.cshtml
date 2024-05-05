@@ -29,7 +29,14 @@
                     <div class="card-body">
                         <h5 class="card-title">Job Title</h5>
                         <p class="card-text">Job Description</p>
-                        <a href="Identity/Account/Login" class="btn btn-primary">Apply Now</a> 
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="/Job" class="btn btn-primary">Apply Now</a>
+                        }
+                        else
+                        {
+                            <a href="/Identity/Account/Login" class="btn btn-primary">Apply Now</a>
+                        }
                     </div>
                 </div>
             </div>
