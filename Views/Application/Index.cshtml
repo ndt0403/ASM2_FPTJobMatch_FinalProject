@@ -67,12 +67,12 @@
                     @if (User.IsInRole("Employer"))
                     {
                         <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                     } 
                     @if (User.IsInRole("Admin")) 
                     {
                         <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
                     } 
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
             </td>
         </tr>
 }
