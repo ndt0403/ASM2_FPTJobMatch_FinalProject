@@ -34,6 +34,7 @@ namespace FPT_JOBPORTAL.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager; 
 
+
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
@@ -123,7 +124,7 @@ namespace FPT_JOBPORTAL.Areas.Identity.Pages.Account
 
             Input = new()
             {
-                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+                RoleList = _roleManager.Roles.Where(r => r.Name != "Admin").Select(x => x.Name).Select(i => new SelectListItem
                 {
                     Text = i,
                     Value = i

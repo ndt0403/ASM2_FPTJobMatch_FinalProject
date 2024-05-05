@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ASM2_FPTJobMatch.Migrations
 {
     /// <inheritdoc />
-    public partial class SupportProject : Migration
+    public partial class UpdateProject : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

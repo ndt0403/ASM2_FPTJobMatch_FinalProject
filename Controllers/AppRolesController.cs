@@ -15,7 +15,7 @@ namespace FPT_JOBPORTAL.Controllers
         }
         public IActionResult Index()
         {
-            var roles = _roleManager.Roles;
+            var roles = _roleManager.Roles.Where(r => r.Name != "Admin");
             return View(roles);
         }
 

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASM2_FPTJobMatch.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240505015325_SupportProject")]
-    partial class SupportProject
+    [Migration("20240505053419_UpdateProject")]
+    partial class UpdateProject
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
