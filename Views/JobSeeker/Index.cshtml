@@ -1,0 +1,30 @@
+﻿@model List<ApplicationUser>
+<h1>Job Seeker List</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Street Address</th>
+            <th>City</th
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var applicationUser in Model)
+        {
+            <tr>
+                <td>@applicationUser.Name</td>
+                <td>@applicationUser.Email</td>
+                <td>@applicationUser.PhoneNumber</td>
+                <td>@applicationUser.StreetAddress</td>
+                <td>@applicationUser.City</td>
+                <td>
+                    <a asp-controller="JobSeeker" asp-action="Suspend" asp-route-id="@applicationUser.Id" class="btn btn-primary">Suspend</a>
+                    <a asp-controller="JobSeeker" asp-action="Delete" asp-route-id="@applicationUser.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

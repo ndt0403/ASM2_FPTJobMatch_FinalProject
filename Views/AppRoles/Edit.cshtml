@@ -1,0 +1,13 @@
+@using Microsoft.AspNetCore.Identity;
+@model IdentityRole
+
+<h2>Edit Role</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <button type="submit">Save</button>
+</form>
