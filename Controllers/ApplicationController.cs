@@ -18,6 +18,7 @@ namespace FPT_JOBPORTAL.Controllers
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
+
         public ApplicationController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;

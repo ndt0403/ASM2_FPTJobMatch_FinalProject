@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASM2_FPTJobMatch.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240505053419_UpdateProject")]
+    [Migration("20240505091948_UpdateProject")]
     partial class UpdateProject
     {
         /// <inheritdoc />
@@ -81,6 +81,78 @@ namespace ASM2_FPTJobMatch.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryModel");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "A Back End Developer is responsible for server-side application logic and integration of the work front-end developers do.",
+                            Name = "Back-End Developer",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "A Front End Developer is focused on the user interface and user experience of a website or application.",
+                            Name = "Front-End Developer",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "A Full Stack Developer is capable of working on both the front-end and back-end portions of an application.",
+                            Name = "Full Stack Developer",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "A Mobile Apps Developer is specialized in creating applications for mobile devices, such as smartphones and tablets.",
+                            Name = "Mobile Apps Developer",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "A Product Manager is responsible for the strategy, roadmap, and feature definition of a product.",
+                            Name = "Product Manager",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "A Python Developer uses the Python programming language for developing software solutions.",
+                            Name = "Python Developer",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "A System Administrator manages and maintains the operations of computer systems and networks.",
+                            Name = "System Administrator",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "A Tester tests software to ensure it meets requirements and is free of bugs and defects.",
+                            Name = "Tester",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "A C++ Developer uses the C++ programming language for developing software solutions.",
+                            Name = "C++ Developer",
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Description = "A Software Architect designs and creates the overall structure of a software system.",
+                            Name = "Software Architect",
+                            Status = 0
+                        });
                 });
 
             modelBuilder.Entity("FPT_JOBPORTAL.JobModel", b =>
@@ -117,6 +189,63 @@ namespace ASM2_FPTJobMatch.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("JobModel");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 4,
+                            Company = "MegaTechnology",
+                            DatePost = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DescriptionJob = "Join our mobile development team to create innovative and user-friendly mobile applications for iOS and Android platforms.",
+                            NameJob = "Mobile Apps Developer",
+                            Requirement = "Experience in mobile app development using Swift or Kotlin, familiarity with mobile UI/UX principles, ability to adapt to new technologies.",
+                            Salary = 95000.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 3,
+                            Company = "MegaTechnology",
+                            DatePost = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DescriptionJob = "We're seeking a Full Stack Developer to work on both front-end and back-end components of our applications.",
+                            NameJob = "Full Stack Developer",
+                            Requirement = "Proficiency in both front-end and back-end technologies, experience with frameworks such as React and Node.js, ability to work in a fast-paced environment.",
+                            Salary = 95000.0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 2,
+                            Company = "MegaTechnology",
+                            DatePost = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DescriptionJob = "Exciting opportunity for a Front End Developer Intern to gain hands-on experience in building user interfaces and enhancing user experiences.",
+                            NameJob = "Front End Developer Intern",
+                            Requirement = "Basic understanding of HTML, CSS, and JavaScript, eager to learn and contribute to front-end development projects.",
+                            Salary = 25000.0
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 1,
+                            Company = "MegaTechnology",
+                            DatePost = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DescriptionJob = "Join our team as a Senior Back End Developer to lead server-side application logic and integration efforts.",
+                            NameJob = "Senior Back End Developer",
+                            Requirement = "5+ years of experience in back-end development, proficiency in relevant technologies such as Node.js, Python, or Java, strong understanding of databases and API design.",
+                            Salary = 95000.0
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 5,
+                            Company = "MegaTechnology",
+                            DatePost = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DescriptionJob = "We're looking for a Product Manager to drive the strategy and development of our product offerings.",
+                            NameJob = "Product Manager",
+                            Requirement = "Strong leadership and communication skills, experience in product management, ability to prioritize and manage multiple projects.",
+                            Salary = 110000.0
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

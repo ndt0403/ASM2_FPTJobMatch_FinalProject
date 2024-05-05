@@ -23,6 +23,6 @@ namespace FPT_JOBPORTAL
         public Status Status { get; set; }
 
         [ForeignKey("JobId")]
-        public virtual JobModel? Job { get; set; } 
+        public virtual JobModel? Job { get; set; }
     }
 }
